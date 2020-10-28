@@ -1,0 +1,533 @@
+include includes/header.pug 
+block content
+  body
+    // [ Pre-loader ] start
+    .loader-bg
+      .loader-track
+        .loader-fill
+    // [ Pre-loader ] End
+    include includes/sidenav.pug 
+    include includes/navbar-nav.pug
+    // [ Main Content ] start
+    .pcoded-main-container
+      .pcoded-wrapper
+        .pcoded-content
+          .pcoded-inner-content
+            // [ breadcrumb ] start
+            // [ breadcrumb ] end
+            .main-body
+              .page-wrapper
+                // [ Main Content ] start
+                .row
+                  // [ daily sales section ] start
+                  .col-md-6.col-xl-4
+                    .card.daily-sales
+                      .card-block
+                        h6.mb-4 Daily Sales
+                        .row.d-flex.align-items-center
+                          .col-9
+                            h3.f-w-300.d-flex.align-items-center.m-b-0
+                              i.feather.icon-arrow-up.text-c-green.f-30.m-r-10
+                              | $ 249.95
+                          .col-3.text-right
+                            p.m-b-0 67%
+                        .progress.m-t-30(style='height: 7px;')
+                          .progress-bar.progress-c-theme(role='progressbar' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+                  // [ daily sales section ] end
+                  // [ Monthly  sales section ] starts
+                  .col-md-6.col-xl-4
+                    .card.Monthly-sales
+                      .card-block
+                        h6.mb-4 Monthly Sales
+                        .row.d-flex.align-items-center
+                          .col-9
+                            h3.f-w-300.d-flex.align-items-center.m-b-0
+                              i.feather.icon-arrow-down.text-c-red.f-30.m-r-10
+                              | $ 2.942.32
+                          .col-3.text-right
+                            p.m-b-0 36%
+                        .progress.m-t-30(style='height: 7px;')
+                          .progress-bar.progress-c-theme2(role='progressbar' style='width: 35%;' aria-valuenow='35' aria-valuemin='0' aria-valuemax='100')
+                  // [ Monthly  sales section ] end
+                  // [ year  sales section ] starts
+                  .col-md-12.col-xl-4
+                    .card.yearly-sales
+                      .card-block
+                        h6.mb-4 Yearly Sales
+                        .row.d-flex.align-items-center
+                          .col-9
+                            h3.f-w-300.d-flex.align-items-center.m-b-0
+                              i.feather.icon-arrow-up.text-c-green.f-30.m-r-10
+                              | $ 8.638.32
+                          .col-3.text-right
+                            p.m-b-0 80%
+                        .progress.m-t-30(style='height: 7px;')
+                          .progress-bar.progress-c-theme(role='progressbar' style='width: 70%;' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
+                  // [ year  sales section ] end
+                  // [ Recent Users ] start
+                  .col-xl-8.col-md-6
+                    .card.Recent-Users
+                      .card-header
+                        h5 Recent Users
+                      .card-block.px-0.py-3
+                        .table-responsive
+                          table.table.table-hover
+                            tbody
+                              tr.unread
+                                td
+                                  img.rounded-circle(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                td
+                                  h6.mb-1 Isabella Christensen
+                                  p.m-0 Lorem Ipsum is simply…
+                                td
+                                  h6.text-muted
+                                    i.fas.fa-circle.text-c-green.f-10.m-r-15
+                                    | 11 MAY 12:56
+                                td
+                                  a.label.theme-bg2.text-white.f-12(href='#!') Reject
+                                  a.label.theme-bg.text-white.f-12(href='#!') Approve
+                              tr.unread
+                                td
+                                  img.rounded-circle(style='width:40px;' src='assets/images/user/avatar-2.jpg' alt='activity-user')
+                                td
+                                  h6.mb-1 Mathilde Andersen
+                                  p.m-0 Lorem Ipsum is simply text of…
+                                td
+                                  h6.text-muted
+                                    i.fas.fa-circle.text-c-red.f-10.m-r-15
+                                    | 11 MAY 10:35
+                                td
+                                  a.label.theme-bg2.text-white.f-12(href='#!') Reject
+                                  a.label.theme-bg.text-white.f-12(href='#!') Approve
+                              tr.unread
+                                td
+                                  img.rounded-circle(style='width:40px;' src='assets/images/user/avatar-3.jpg' alt='activity-user')
+                                td
+                                  h6.mb-1 Karla Sorensen
+                                  p.m-0 Lorem Ipsum is simply…
+                                td
+                                  h6.text-muted
+                                    i.fas.fa-circle.text-c-green.f-10.m-r-15
+                                    | 9 MAY 17:38
+                                td
+                                  a.label.theme-bg2.text-white.f-12(href='#!') Reject
+                                  a.label.theme-bg.text-white.f-12(href='#!') Approve
+                              tr.unread
+                                td
+                                  img.rounded-circle(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                td
+                                  h6.mb-1 Ida Jorgensen
+                                  p.m-0 Lorem Ipsum is simply text of…
+                                td
+                                  h6.text-muted.f-w-300
+                                    i.fas.fa-circle.text-c-red.f-10.m-r-15
+                                    | 19 MAY 12:56
+                                td
+                                  a.label.theme-bg2.text-white.f-12(href='#!') Reject
+                                  a.label.theme-bg.text-white.f-12(href='#!') Approve
+                              tr.unread
+                                td
+                                  img.rounded-circle(style='width:40px;' src='assets/images/user/avatar-2.jpg' alt='activity-user')
+                                td
+                                  h6.mb-1 Albert Andersen
+                                  p.m-0 Lorem Ipsum is simply dummy…
+                                td
+                                  h6.text-muted
+                                    i.fas.fa-circle.text-c-green.f-10.m-r-15
+                                    | 21 July 12:56
+                                td
+                                  a.label.theme-bg2.text-white.f-12(href='#!') Reject
+                                  a.label.theme-bg.text-white.f-12(href='#!') Approve
+                  // [ Recent Users ] end
+                  // [ statistics year chart ] start
+                  .col-xl-4.col-md-6
+                    .card.card-event
+                      .card-block
+                        .row.align-items-center.justify-content-center
+                          .col
+                            h5.m-0 Upcoming Event
+                          .col-auto
+                            label.label.theme-bg2.text-white.f-14.f-w-400.float-right 34%
+                        h2.mt-3.f-w-300
+                          | 45
+                          sub.text-muted.f-14 Competitors
+                        h6.text-muted.mt-4.mb-0 You can participate in event 
+                        i.fab.fa-angellist.text-c-purple.f-50
+                    .card
+                      .card-block.border-bottom
+                        .row.d-flex.align-items-center
+                          .col-auto
+                            i.feather.icon-zap.f-30.text-c-green
+                          .col
+                            h3.f-w-300 235
+                            span.d-block.text-uppercase TOTAL IDEAS
+                      .card-block
+                        .row.d-flex.align-items-center
+                          .col-auto
+                            i.feather.icon-map-pin.f-30.text-c-blue
+                          .col
+                            h3.f-w-300 26
+                            span.d-block.text-uppercase TOTAL LOCATIONS
+                  // [ statistics year chart ] end
+                  // [social-media section] start
+                  .col-md-12.col-xl-4
+                    .card.card-social
+                      .card-block.border-bottom
+                        .row.align-items-center.justify-content-center
+                          .col-auto
+                            i.fab.fa-facebook-f.text-primary.f-36
+                          .col.text-right
+                            h3 12,281
+                            h5.text-c-green.mb-0
+                              | +7.2% 
+                              span.text-muted Total Likes
+                      .card-block
+                        .row.align-items-center.justify-content-center.card-active
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Target:
+                              | 35,098
+                            .progress
+                              .progress-bar.progress-c-theme(role='progressbar' style='width:60%;height:6px;' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100')
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Duration:
+                              | 3,539
+                            .progress
+                              .progress-bar.progress-c-theme2(role='progressbar' style='width:45%;height:6px;' aria-valuenow='45' aria-valuemin='0' aria-valuemax='100')
+                  .col-md-6.col-xl-4
+                    .card.card-social
+                      .card-block.border-bottom
+                        .row.align-items-center.justify-content-center
+                          .col-auto
+                            i.fab.fa-twitter.text-c-blue.f-36
+                          .col.text-right
+                            h3 11,200
+                            h5.text-c-purple.mb-0
+                              | +6.2% 
+                              span.text-muted Total Likes
+                      .card-block
+                        .row.align-items-center.justify-content-center.card-active
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Target:
+                              | 34,185
+                            .progress
+                              .progress-bar.progress-c-green(role='progressbar' style='width:40%;height:6px;' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Duration:
+                              | 4,567
+                            .progress
+                              .progress-bar.progress-c-blue(role='progressbar' style='width:70%;height:6px;' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
+                  .col-md-6.col-xl-4
+                    .card.card-social
+                      .card-block.border-bottom
+                        .row.align-items-center.justify-content-center
+                          .col-auto
+                            i.fab.fa-google-plus-g.text-c-red.f-36
+                          .col.text-right
+                            h3 10,500
+                            h5.text-c-blue.mb-0
+                              | +5.9% 
+                              span.text-muted Total Likes
+                      .card-block
+                        .row.align-items-center.justify-content-center.card-active
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Target:
+                              | 25,998
+                            .progress
+                              .progress-bar.progress-c-theme(role='progressbar' style='width:80%;height:6px;' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100')
+                          .col-6
+                            h6.text-center.m-b-10
+                              span.text-muted.m-r-5 Duration:
+                              | 7,753
+                            .progress
+                              .progress-bar.progress-c-theme2(role='progressbar' style='width:50%;height:6px;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+                  // [social-media section] end
+                  // [ rating list ] starts
+                  .col-xl-4.col-md-6
+                    .card.user-list
+                      .card-header
+                        h5 Rating
+                      .card-block
+                        .row.align-items-center.justify-content-center.m-b-20
+                          .col-6
+                            h2.f-w-300.d-flex.align-items-center.float-left.m-0
+                              | 4.7 
+                              i.fas.fa-star.f-10.m-l-10.text-c-yellow
+                          .col-6
+                            h6.d-flex.align-items-center.float-right.m-0
+                              | 0.4 
+                              i.fas.fa-caret-up.text-c-green.f-22.m-l-10
+                        .row
+                          .col-xl-12
+                            h6.align-items-center.float-left
+                              i.fas.fa-star.f-10.m-r-10.text-c-yellow
+                              | 5
+                            h6.align-items-center.float-right 384
+                            .progress.m-t-30.m-b-20(style='height: 6px;')
+                              .progress-bar.progress-c-theme(role='progressbar' style='width: 70%;' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
+                          .col-xl-12
+                            h6.align-items-center.float-left
+                              i.fas.fa-star.f-10.m-r-10.text-c-yellow
+                              | 4
+                            h6.align-items-center.float-right 145
+                            .progress.m-t-30.m-b-20(style='height: 6px;')
+                              .progress-bar.progress-c-theme(role='progressbar' style='width: 35%;' aria-valuenow='35' aria-valuemin='0' aria-valuemax='100')
+                          .col-xl-12
+                            h6.align-items-center.float-left
+                              i.fas.fa-star.f-10.m-r-10.text-c-yellow
+                              | 3
+                            h6.align-items-center.float-right 24
+                            .progress.m-t-30.m-b-20(style='height: 6px;')
+                              .progress-bar.progress-c-theme(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                          .col-xl-12
+                            h6.align-items-center.float-left
+                              i.fas.fa-star.f-10.m-r-10.text-c-yellow
+                              | 2
+                            h6.align-items-center.float-right 1
+                            .progress.m-t-30.m-b-20(style='height: 6px;')
+                              .progress-bar.progress-c-theme(role='progressbar' style='width: 10%;' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+                          .col-xl-12
+                            h6.align-items-center.float-left
+                              i.fas.fa-star.f-10.m-r-10.text-c-yellow
+                              | 1
+                            h6.align-items-center.float-right 0
+                            .progress.m-t-30.m-b-20(style='height: 6px;')
+                              .progress-bar(role='progressbar' style='width:0;' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+                  // [ rating list ] end
+                  .col-xl-8.col-md-12.m-b-30
+                    ul#myTab.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                        a#home-tab.nav-link(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='false') Today
+                      li.nav-item
+                        a#profile-tab.nav-link.active.show(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='true') This Week
+                      li.nav-item
+                        a#contact-tab.nav-link(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') All
+                    #myTabContent.tab-content
+                      #home.tab-pane.fade(role='tabpanel' aria-labelledby='home-tab')
+                        table.table.table-hover
+                          thead
+                            tr
+                              th User
+                              th Activity
+                              th Time
+                              th Status
+                              th.text-right
+                          tbody
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 3:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-2.jpg' alt='activity-user')
+                                  | Albert Andersen
+                              td
+                                h6.m-0 Jumps over the lazy
+                              td
+                                h6.m-0 2:37 PM
+                              td
+                                h6.m-0.text-c-red Missed
+                              td.text-right
+                                i.fas.fa-circle.text-c-red.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-3.jpg' alt='activity-user')
+                                  | Silje Larsen
+                              td
+                                h6.m-0 Dog the quick brown
+                              td
+                                h6.m-0 10:23 AM
+                              td
+                                h6.m-0.text-c-purple Delayed
+                              td.text-right
+                                i.fas.fa-circle.text-c-purple.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 4:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                      #profile.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='profile-tab')
+                        table.table.table-hover
+                          thead
+                            tr
+                              th User
+                              th Activity
+                              th Time
+                              th Status
+                              th.text-right
+                          tbody
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-2.jpg' alt='activity-user')
+                                  | Albert Andersen
+                              td
+                                h6.m-0 Jumps over the lazy
+                              td
+                                h6.m-0 2:37 PM
+                              td
+                                h6.m-0.text-c-red Missed
+                              td.text-right
+                                i.fas.fa-circle.text-c-red.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 3:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 4:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-3.jpg' alt='activity-user')
+                                  | Silje Larsen
+                              td
+                                h6.m-0 Dog the quick brown
+                              td
+                                h6.m-0 10:23 AM
+                              td
+                                h6.m-0.text-c-purple Delayed
+                              td.text-right
+                                i.fas.fa-circle.text-c-purple.f-10
+                      #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                        table.table.table-hover
+                          thead
+                            tr
+                              th User
+                              th Activity
+                              th Time
+                              th Status
+                              th.text-right
+                          tbody
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-3.jpg' alt='activity-user')
+                                  | Silje Larsen
+                              td
+                                h6.m-0 Dog the quick brown
+                              td
+                                h6.m-0 10:23 AM
+                              td
+                                h6.m-0.text-c-purple Delayed
+                              td.text-right
+                                i.fas.fa-circle.text-c-purple.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 3:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-2.jpg' alt='activity-user')
+                                  | Albert Andersen
+                              td
+                                h6.m-0 Jumps over the lazy
+                              td
+                                h6.m-0 2:37 PM
+                              td
+                                h6.m-0.text-c-red Missed
+                              td.text-right
+                                i.fas.fa-circle.text-c-red.f-10
+                            tr
+                              td
+                                h6.m-0
+                                  img.rounded-circle.m-r-10(style='width:40px;' src='assets/images/user/avatar-1.jpg' alt='activity-user')
+                                  | Ida Jorgensen
+                              td
+                                h6.m-0 The quick brown fox
+                              td
+                                h6.m-0 4:28 PM
+                              td
+                                h6.m-0.text-c-green Done
+                              td.text-right
+                                i.fas.fa-circle.text-c-green.f-10
+                // [ Main Content ] end
+                // [ Main Content ] end
+                // Warning Section Starts
+                // Older IE warning message
+                //if lt IE 11
+                  .ie-warning
+                    h1 Warning!!
+                    p
+                      | You are using an outdated version of Internet Explorer, please upgrade
+                      br
+                      | to any of the following web browsers to access this website.
+                    .iew-container
+                      ul.iew-download
+                        li
+                          a(href='http://www.google.com/chrome/')
+                            img(src='assets/images/browser/chrome.png' alt='Chrome')
+                            div Chrome
+                        li
+                          a(href='https://www.mozilla.org/en-US/firefox/new/')
+                            img(src='assets/images/browser/firefox.png' alt='Firefox')
+                            div Firefox
+                        li
+                          a(href='http://www.opera.com')
+                            img(src='assets/images/browser/opera.png' alt='Opera')
+                            div Opera
+                        li
+                          a(href='https://www.apple.com/safari/')
+                            img(src='assets/images/browser/safari.png' alt='Safari')
+                            div Safari
+                        li
+                          a(href='http://windows.microsoft.com/en-us/internet-explorer/download-ie')
+                            img(src='assets/images/browser/ie.png' alt='')
+                            div IE (11 & above)
+                    p Sorry for the inconvenience!
+                // Warning Section Ends
+                // Required Js
+                include includes/footer.pug
+                

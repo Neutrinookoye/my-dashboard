@@ -1,0 +1,168 @@
+include includes/header.pug
+block content
+  body
+    // [ Pre-loader ] start
+    .loader-bg
+      .loader-track
+        .loader-fill
+    // [ Pre-loader ] End
+    include includes/sidenav.pug
+    include includes/navbar-nav.pug
+    // [ Main Content ] start
+    section.pcoded-main-container
+      .pcoded-wrapper
+        .pcoded-content
+          .pcoded-inner-content
+            // [ breadcrumb ] start
+            .page-header
+              .page-block
+                .row.align-items-center
+                  .col-md-12
+                    .page-header-title
+                      h5.m-b-10 Google Map
+                    ul.breadcrumb
+                      li.breadcrumb-item
+                        a(href='index.html')
+                          i.feather.icon-home
+                      li.breadcrumb-item
+                        a(href='#!') Maps
+                      li.breadcrumb-item
+                        a(href='javascript:') Google Maps
+            // [ breadcrumb ] end
+            .main-body
+              .page-wrapper
+                // [ Main Content ] start
+                .row
+                  // [ basic-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Basic
+                        span.d-block.m-t-5 Map shows places around the world
+                      .card-block
+                        #basic-map.set-map(style='height:400px;')
+                  // [ basic-map ] end
+                  // [ Markers-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Markers
+                        span.d-block.m-t-5
+                          | Maps shows 
+                          code location
+                          |  of the place
+                      .card-block
+                        #markers-map.set-map(style='height:400px;')
+                  // [ Markers-map ] end
+                  // [ Geo-Coding-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Geo-Coding
+                        span.d-block.m-t-5 Search your location
+                      .card-block
+                        form#geocoding_form1(method='post')
+                          .input-group.input-group-button.mb-3
+                            input#address.form-control(type='text' placeholder='Write your place')
+                            span#basic-addon1.input-group-addon
+                              button.btn.btn-primary.m-0 Search Location
+                        #mapGeo.set-map(style='height:400px;')
+                  // [ Geo-Coding-map ] end
+                  // [ Overlay-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Overlay
+                        span.d-block.m-t-5 Map shows places around the world
+                      .card-block
+                        form#geocoding_form2(method='post')
+                          #mapOverlay.set-map(style='height:400px;')
+                  // [ Overlay-map ] end
+                  // [ Street-View-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Street View
+                        span.d-block.m-t-5 Map shows view of street
+                      .card-block
+                        form#geocoding_form3(method='post')
+                          #mapStreet.set-map(style='height:400px;')
+                  // [ Street-View-map ] end
+                  // [ Map-Types-map ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Map Types
+                        span.d-block.m-t-5
+                          | Select your 
+                          code map-types
+                          |  to see differant views
+                      .card-block
+                        form#geocoding_form4(method='post')
+                          #mapTypes.set-map(style='height:400px;')
+                  // [ Map-Types-map ] end
+                  // [ GeoRSS-Layers ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 GeoRSS Layers
+                        span.d-block.m-t-5
+                          | Shows 
+                          code RSS
+                          |  location
+                      .card-block
+                        form#geocoding_form5(method='post')
+                          #georssmap.set-map(style='height:400px;')
+                  // [ GeoRSS-Layers ] end
+                  // [ Marker-Clustering ] start
+                  .col-lg-12.col-xl-6
+                    .card
+                      .card-header
+                        h5 Marker Clustering
+                        span.d-block.m-t-5 Multiple markers show differant location
+                      .card-block
+                        form#geocoding_form6(method='post')
+                          #map.set-map(style='height:400px;')
+                  // [ Marker-Clustering ] end
+                  // [ Main Content ] end
+                  // [ Main Content ] end
+                  // Warning Section Starts
+                  // Older IE warning message
+                  //if lt IE 11
+                    .ie-warning
+                      h1 Warning!!
+                      p
+                        | You are using an outdated version of Internet Explorer, please upgrade
+                        br
+                        | to any of the following web browsers to access this website.
+                      .iew-container
+                        ul.iew-download
+                          li
+                            a(href='http://www.google.com/chrome/')
+                              img(src='assets/images/browser/chrome.png' alt='Chrome')
+                              div Chrome
+                          li
+                            a(href='https://www.mozilla.org/en-US/firefox/new/')
+                              img(src='assets/images/browser/firefox.png' alt='Firefox')
+                              div Firefox
+                          li
+                            a(href='http://www.opera.com')
+                              img(src='assets/images/browser/opera.png' alt='Opera')
+                              div Opera
+                          li
+                            a(href='https://www.apple.com/safari/')
+                              img(src='assets/images/browser/safari.png' alt='Safari')
+                              div Safari
+                          li
+                            a(href='http://windows.microsoft.com/en-us/internet-explorer/download-ie')
+                              img(src='assets/images/browser/ie.png' alt='')
+                              div IE (11 & above)
+                      p Sorry for the inconvenience!
+                  // Warning Section Ends
+                  // Required Js
+                  include includes/footer.pug
+                  // google-map Js
+                  script(src='https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js')
+                  script(type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=true')
+                  script(src='assets/plugins/google-maps/js/gmaps.js')
+                  script(src='assets/js/pages/google-maps.js')

@@ -1,0 +1,32 @@
+include includes/header.pug 
+block content
+  body
+    .auth-wrapper
+      .auth-content
+        .auth-bg
+          span.r
+          span.r.s
+          span.r.s
+          span.r
+        .card
+          .card-body.text-center
+            .mb-4
+              i.feather.icon-unlock.auth-icon
+            h3.mb-4 Login
+            .input-group.mb-3
+              input.form-control(type='email' placeholder='Email')
+            .input-group.mb-4
+              input.form-control(type='password' placeholder='password')
+            .form-group.text-left
+              .checkbox.checkbox-fill.d-inline
+                input#checkbox-fill-a1(type='checkbox' name='checkbox-fill-1' checked='')
+                label.cr(for='checkbox-fill-a1')  Save Details
+            button.btn.btn-primary.shadow-2.mb-4 Login
+            p.mb-2.text-muted
+              | Forgot password? 
+              a(href='auth-reset-password.html') Reset
+            p.mb-0.text-muted
+              | Don’t have an account? 
+              a(href='auth-signup.html') Signup
+    // Required Js
+    include includes/footer.pug

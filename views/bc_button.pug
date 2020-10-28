@@ -1,0 +1,225 @@
+include includes/header.pug
+block content
+  body
+    // [ Pre-loader ] start
+    .loader-bg
+      .loader-track
+        .loader-fill
+    // [ Pre-loader ] End
+    include includes/sidenav.pug
+    include includes/navbar-nav.pug
+    // [ Main Content ] start
+    .pcoded-main-container
+      .pcoded-wrapper
+        .pcoded-content
+          .pcoded-inner-content
+            // [ breadcrumb ] start
+            .page-header
+              .page-block
+                .row.align-items-center
+                  .col-md-12
+                    .page-header-title
+                      h5.m-b-10 Button
+                    ul.breadcrumb
+                      li.breadcrumb-item
+                        a(href='index.html')
+                          i.feather.icon-home
+                      li.breadcrumb-item
+                        a(href='javascript:') Basic Componants
+                      li.breadcrumb-item
+                        a(href='javascript:') Button
+            // [ breadcrumb ] end
+            .main-body
+              .page-wrapper
+                // [ Main Content ] start
+                .row
+                  .col-sm-12
+                    .card
+                      .card-header
+                        h5 Default
+                      .card-block
+                        button.btn.btn-primary(type='button' title='btn btn-primary' data-toggle='tooltip') Primary
+                        button.btn.btn-secondary(type='button' title='btn btn-secondary' data-toggle='tooltip') Secondary
+                        button.btn.btn-success(type='button' title='btn btn-success' data-toggle='tooltip') Success
+                        button.btn.btn-danger(type='button' title='btn btn-danger' data-toggle='tooltip') Danger
+                        button.btn.btn-warning(type='button' title='btn btn-warning' data-toggle='tooltip') Warning
+                        button.btn.btn-info(type='button' title='btn btn-info' data-toggle='tooltip') Info
+                        button.btn.btn-light(type='button' title='btn btn-light' data-toggle='tooltip') Light
+                        button.btn.btn-dark(type='button' title='btn btn-dark' data-toggle='tooltip') Dark
+                        button.btn.btn-link(type='button' title='btn btn-link' data-toggle='tooltip') Link
+                  .col-sm-12
+                    .card
+                      .card-header
+                        h5 Outline
+                      .card-block
+                        button.btn.btn-outline-primary(type='button' title='btn btn-outline-primary' data-toggle='tooltip') Primary
+                        button.btn.btn-outline-secondary(type='button' title='btn btn-outline-secondary' data-toggle='tooltip') Secondary
+                        button.btn.btn-outline-success(type='button' title='btn btn-outline-success' data-toggle='tooltip') Success
+                        button.btn.btn-outline-danger(type='button' title='btn btn-outline-danger' data-toggle='tooltip') Danger
+                        button.btn.btn-outline-warning(type='button' title='btn btn-outline-warning' data-toggle='tooltip') Warning
+                        button.btn.btn-outline-info(type='button' title='btn btn-outline-info' data-toggle='tooltip') Info
+                        button.btn.btn-outline-light(type='button' title='btn btn-outline-light' data-toggle='tooltip') Light
+                        button.btn.btn-outline-dark(type='button' title='btn btn-outline-dark' data-toggle='tooltip') Dark
+                  .col-sm-12
+                    .card
+                      .card-header
+                        h5 Square Button
+                      .card-block
+                        p
+                          | use 
+                          code .btn-square
+                          |  in class 
+                          code .btn
+                          |  class to get square button
+                        button.btn.btn-square.btn-primary(type='button') Primary
+                        button.btn.btn-square.btn-secondary(type='button') Secondary
+                        button.btn.btn-square.btn-success(type='button') Success
+                        button.btn.btn-square.btn-danger(type='button') Danger
+                        button.btn.btn-square.btn-warning(type='button') Warning
+                        button.btn.btn-square.btn-info(type='button') Info
+                        button.btn.btn-square.btn-light(type='button') Light
+                        button.btn.btn-square.btn-dark(type='button') Dark
+                .row
+                  .col-md-12
+                    .card
+                      .card-header
+                        h5 Basic Dropdown Button
+                      .card-block
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-primary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Primary
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Secondary
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-success.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Success
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-danger.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Danger
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-warning.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Warning
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-info.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Info
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                  .col-md-12
+                    .card
+                      .card-header
+                        h5 Split Dropdown Button
+                      .card-block
+                        // Example split danger button
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-primary(type='button') Primary
+                          button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-secondary(type='button') Secondary
+                          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-success(type='button') Success
+                          button.btn.btn-success.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-danger(type='button') Danger
+                          button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-warning(type='button') Warning
+                          button.btn.btn-warning.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+                        .btn-group.mb-2.mr-2
+                          button.btn.btn-info(type='button') Info
+                          button.btn.btn-info.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.sr-only Toggle Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#!') Separated link
+    // [ Main Content ] end
+    // Warning Section Starts
+    // Older IE warning message
+    //if lt IE 11
+      .ie-warning
+        h1 Warning!!
+        p
+          | You are using an outdated version of Internet Explorer, please upgrade
+          br
+          | to any of the following web browsers to access this website.
+        .iew-container
+          ul.iew-download
+            li
+              a(href='http://www.google.com/chrome/')
+                img(src='assets/images/browser/chrome.png' alt='Chrome')
+                div Chrome
+            li
+              a(href='https://www.mozilla.org/en-US/firefox/new/')
+                img(src='assets/images/browser/firefox.png' alt='Firefox')
+                div Firefox
+            li
+              a(href='http://www.opera.com')
+                img(src='assets/images/browser/opera.png' alt='Opera')
+                div Opera
+            li
+              a(href='https://www.apple.com/safari/')
+                img(src='assets/images/browser/safari.png' alt='Safari')
+                div Safari
+            li
+              a(href='http://windows.microsoft.com/en-us/internet-explorer/download-ie')
+                img(src='assets/images/browser/ie.png' alt='')
+                div IE (11 & above)
+        p Sorry for the inconvenience!
+    // Warning Section Ends
+    // Required Js
+    include includes/footer.pug

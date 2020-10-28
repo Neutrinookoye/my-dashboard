@@ -1,0 +1,38 @@
+include includes/header.pug
+block content
+  body
+    .auth-wrapper
+      .auth-content
+        .auth-bg
+          span.r
+          span.r.s
+          span.r.s
+          span.r
+        .card
+          .card-body.text-center
+            .mb-4
+              i.feather.icon-user-plus.auth-icon
+            h3.mb-4 Sign up
+            .input-group.mb-3
+              input.form-control(type='text' placeholder='Username')
+            .input-group.mb-3
+              input.form-control(type='email' placeholder='Email')
+            .input-group.mb-4
+              input.form-control(type='password' placeholder='password')
+            .form-group.text-left
+              .checkbox.checkbox-fill.d-inline
+                input#checkbox-fill-1(type='checkbox' name='checkbox-fill-1' checked='')
+                label.cr(for='checkbox-fill-1')  Save Details
+            .form-group.text-left
+              .checkbox.checkbox-fill.d-inline
+                input#checkbox-fill-2(type='checkbox' name='checkbox-fill-2')
+                label.cr(for='checkbox-fill-2')
+                  | Send me the 
+                  a(href='#!')  Newsletter
+                  |  weekly.
+            button.btn.btn-primary.shadow-2.mb-4 Sign up
+            p.mb-0.text-muted
+              | Allready have an account? 
+              a(href='auth-signin.html')  Log in
+    // Required Js
+    include includes/footer.pug

@@ -1,0 +1,276 @@
+include includes/header.pug
+block content
+  body
+    // [ Pre-loader ] start
+    .loader-bg
+      .loader-track
+        .loader-fill
+    // [ Pre-loader ] End
+    include includes/sidenav.pug
+    include includes/navbar-nav.pug
+    // [ Main Content ] start
+    .pcoded-main-container
+      .pcoded-wrapper
+        .pcoded-content
+          .pcoded-inner-content
+            // [ breadcrumb ] start
+            .page-header
+              .page-block
+                .row.align-items-center
+                  .col-md-12
+                    .page-header-title
+                      h5.m-b-10 Form Elements
+                    ul.breadcrumb
+                      li.breadcrumb-item
+                        a(href='index.html')
+                          i.feather.icon-home
+                      li.breadcrumb-item
+                        a(href='javascript:') Form Componants
+                      li.breadcrumb-item
+                        a(href='javascript:') Form Elements
+            // [ breadcrumb ] end
+            .main-body
+              .page-wrapper
+                // [ Main Content ] start
+                .row
+                  .col-sm-12
+                    .card
+                      .card-header
+                        h5 Basic Componant
+                      .card-body
+                        h5 Form controls
+                        hr
+                        .row
+                          .col-md-6
+                            form
+                              .form-group
+                                label(for='exampleInputEmail1') Email address
+                                input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email')
+                                small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+                              .form-group
+                                label(for='exampleInputPassword1') Password
+                                input#exampleInputPassword1.form-control(type='password' placeholder='Password')
+                              .form-group.form-check
+                                input#exampleCheck1.form-check-input(type='checkbox')
+                                label.form-check-label(for='exampleCheck1') Check me out
+                              button.btn.btn-primary(type='submit') Submit
+                          .col-md-6
+                            form
+                              .form-group
+                                label Text
+                                input.form-control(type='text' placeholder='Text')
+                              .form-group
+                                label(for='exampleFormControlSelect1') Example select
+                                select#exampleFormControlSelect1.form-control
+                                  option 1
+                                  option 2
+                                  option 3
+                                  option 4
+                                  option 5
+                              .form-group
+                                label(for='exampleFormControlTextarea1') Example textarea
+                                textarea#exampleFormControlTextarea1.form-control(rows='3')
+                        h5.mt-5 Sizing
+                        hr
+                        .row
+                          .col-md-6
+                            input.mb-3.form-control.form-control-lg(type='text' placeholder='.form-control-lg')
+                            input.mb-3.form-control(type='text' placeholder='Default input')
+                            input.mb-3.form-control.form-control-sm(type='text' placeholder='.form-control-sm')
+                          .col-md-6
+                            select.mb-3.form-control.form-control-lg
+                              option Large select
+                            select.mb-3.form-control
+                              option Default select
+                        h5.mt-5 Inline
+                        hr
+                        form.form-inline
+                          .form-group.mb-2
+                            label.sr-only(for='staticEmail2') Email
+                            input#staticEmail2.form-control-plaintext(type='text' readonly='' value='email@example.com')
+                          .form-group.mx-sm-3.mb-2
+                            label.sr-only(for='inputPassword2') Password
+                            input#inputPassword2.form-control(type='password' placeholder='Password')
+                          button.btn.btn-primary.mb-2(type='submit') Confirm identity
+                        h3.mt-5 Checkboxes and Radios
+                        h5.mt-3 Checkboxes
+                        hr
+                        .custom-control.custom-checkbox
+                          input#customCheck1.custom-control-input(type='checkbox')
+                          label.custom-control-label(for='customCheck1') Check this custom checkbox
+                        .row
+                          .col-md-6
+                            h5.mt-5 Radios
+                            hr
+                            .custom-control.custom-radio
+                              input#customRadio1.custom-control-input(type='radio' name='customRadio')
+                              label.custom-control-label(for='customRadio1') Toggle this custom radio
+                            .custom-control.custom-radio
+                              input#customRadio2.custom-control-input(type='radio' name='customRadio')
+                              label.custom-control-label(for='customRadio2') Or toggle this other custom radio
+                            h5.mt-5 Inline
+                            hr
+                            .custom-control.custom-radio.custom-control-inline
+                              input#customRadioInline1.custom-control-input(type='radio' name='customRadioInline1')
+                              label.custom-control-label(for='customRadioInline1') Toggle this custom radio
+                            .custom-control.custom-radio.custom-control-inline
+                              input#customRadioInline2.custom-control-input(type='radio' name='customRadioInline1')
+                              label.custom-control-label(for='customRadioInline2') Or toggle this other custom radio
+                          .col-md-6
+                            h5.mt-5 Range
+                            hr
+                            label(for='customRange1') Example range
+                            input#customRange1.custom-range(type='range')
+                            label(for='customRange2') Example range
+                            input#customRange2.custom-range(type='range' min='0' max='5')
+                            label(for='customRange3') Example range
+                            input#customRange3.custom-range(type='range' min='0' max='5' step='0.5')
+                    // Input group
+                    .card
+                      .card-header
+                        h5 Input Group
+                      .card-body
+                        .input-group.mb-3
+                          .input-group-prepend
+                            span#basic-addon1.input-group-text @
+                          input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+                        .input-group.mb-3
+                          input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                          .input-group-append
+                            span#basic-addon2.input-group-text @example.com
+                        label(for='basic-url') Your vanity URL
+                        .input-group.mb-3
+                          .input-group-prepend
+                            span#basic-addon3.input-group-text https://example.com/users/
+                          input#basic-url.form-control(type='text' aria-describedby='basic-addon3')
+                        .input-group.mb-3
+                          .input-group-prepend
+                            span.input-group-text $
+                          input.form-control(type='text' aria-label='Amount (to the nearest dollar)')
+                          .input-group-append
+                            span.input-group-text .00
+                        h5.mt-5 Sizing
+                        hr
+                        .input-group.input-group-sm.mb-3
+                          .input-group-prepend
+                            span#inputGroup-sizing-sm.input-group-text Small
+                          input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+                        .input-group.mb-3
+                          .input-group-prepend
+                            span#inputGroup-sizing-default.input-group-text Default
+                          input.form-control(type='text' aria-label='Default' aria-describedby='inputGroup-sizing-default')
+                        .input-group.input-group-lg
+                          .input-group-prepend
+                            span#inputGroup-sizing-lg.input-group-text Large
+                          input.form-control(type='text' aria-label='Large' aria-describedby='inputGroup-sizing-sm')
+                        h5.mt-5 Button Addons
+                        hr
+                        .row
+                          .col-md-6
+                            .input-group.mb-3
+                              .input-group-prepend
+                                button.btn.btn-primary(type='button') Button
+                              input.form-control(type='text' placeholder='' aria-label='' aria-describedby='basic-addon1')
+                            .input-group.mb-3
+                              input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                              .input-group-append
+                                button.btn.btn-primary(type='button') Button
+                          .col-md-6
+                            .input-group.mb-3
+                              .input-group-prepend
+                                button.btn.btn-primary(type='button') Button
+                                button.btn.btn-secondary(type='button') Button
+                              input.form-control(type='text' placeholder='' aria-label='' aria-describedby='basic-addon1')
+                            .input-group
+                              input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                              .input-group-append
+                                button.btn.btn-secondary(type='button') Button
+                                button.btn.btn-primary(type='button') Button
+                          .col-md-6
+                            h5.mt-5 Buttons With Dropdowns
+                            hr
+                            .input-group.mb-3
+                              .input-group-prepend
+                                button.btn.btn-primary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+                                .dropdown-menu
+                                  a.dropdown-item(href='#!') Action
+                                  a.dropdown-item(href='#!') Another action
+                                  a.dropdown-item(href='#!') Something else here
+                                  .dropdown-divider(role='separator')
+                                  a.dropdown-item(href='#!') Separated link
+                              input.form-control(type='text' aria-label='Text input with dropdown button')
+                            .input-group
+                              input.form-control(type='text' aria-label='Text input with dropdown button')
+                              .input-group-append
+                                button.btn.btn-primary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+                                .dropdown-menu
+                                  a.dropdown-item(href='#!') Action
+                                  a.dropdown-item(href='#!') Another action
+                                  a.dropdown-item(href='#!') Something else here
+                                  .dropdown-divider(role='separator')
+                                  a.dropdown-item(href='#!') Separated link
+                          .col-md-6
+                            h5.mt-5 Segmented Buttons
+                            hr
+                            .input-group.mb-3
+                              .input-group-prepend
+                                button.btn.btn-secondary(type='button') Action
+                                button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                  span.sr-only Toggle Dropdown
+                                .dropdown-menu
+                                  a.dropdown-item(href='#!') Action
+                                  a.dropdown-item(href='#!') Another action
+                                  a.dropdown-item(href='#!') Something else here
+                                  .dropdown-divider(role='separator')
+                                  a.dropdown-item(href='#!') Separated link
+                              input.form-control(type='text' aria-label='Text input with segmented dropdown button')
+                            .input-group
+                              input.form-control(type='text' aria-label='Text input with segmented dropdown button')
+                              .input-group-append
+                                button.btn.btn-secondary(type='button') Action
+                                button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                  span.sr-only Toggle Dropdown
+                                .dropdown-menu
+                                  a.dropdown-item(href='#!') Action
+                                  a.dropdown-item(href='#!') Another action
+                                  a.dropdown-item(href='#!') Something else here
+                                  .dropdown-divider(role='separator')
+                                  a.dropdown-item(href='#!') Separated link
+                // [ Main Content ] end
+                // [ Main Content ] end
+                // Warning Section Starts
+                // Older IE warning message
+                //if lt IE 11
+                  .ie-warning
+                    h1 Warning!!
+                    p
+                      | You are using an outdated version of Internet Explorer, please upgrade
+                      br
+                      | to any of the following web browsers to access this website.
+                    .iew-container
+                      ul.iew-download
+                        li
+                          a(href='http://www.google.com/chrome/')
+                            img(src='assets/images/browser/chrome.png' alt='Chrome')
+                            div Chrome
+                        li
+                          a(href='https://www.mozilla.org/en-US/firefox/new/')
+                            img(src='assets/images/browser/firefox.png' alt='Firefox')
+                            div Firefox
+                        li
+                          a(href='http://www.opera.com')
+                            img(src='assets/images/browser/opera.png' alt='Opera')
+                            div Opera
+                        li
+                          a(href='https://www.apple.com/safari/')
+                            img(src='assets/images/browser/safari.png' alt='Safari')
+                            div Safari
+                        li
+                          a(href='http://windows.microsoft.com/en-us/internet-explorer/download-ie')
+                            img(src='assets/images/browser/ie.png' alt='')
+                            div IE (11 & above)
+                    p Sorry for the inconvenience!
+                // Warning Section Ends
+                // Required Js
+                include includes/footer.pug
+
